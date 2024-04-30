@@ -1,7 +1,7 @@
 import math
 
 # input file: the exported measurement csv file directly from Measuralyze application. No changes needed.
-FILE_PATH = "data/day 1/measurements_20240429_105436_d1_p1.csv"
+FILE_PATH = "data/measurements_20240430_104703_d2_p1.csv"
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -14,11 +14,18 @@ def haversine(lat1, lon1, lat2, lon2):
     lat1, lon1, lat2, lon2 = map(math.radians, [lat1, lon1, lat2, lon2])
 
     # Haversine formula
-    dlon = lon2 - lon1
-    dlat = lat2 - lat1
-    a = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2) ** 2
+    deltaLon = lon2 - lon1
+    deltaLat = lat2 - lat1
+    a = math.sin(deltaLat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(deltaLon / 2) ** 2
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
-    r = 6371  # Radius of Earth in kilometers
+
+    """ 
+    according to https://rechneronline.de/earth-radius/, the earth radius for an elevation of 
+    425m above sea level and a latitude of 47 (most of Switzerland) is 6367.168 km, instead of the
+    rounded 6371 that would be standard in calculations like these.
+    This will VERY marginally improve distance error for Switzerland.
+    """
+    r = 6367.168  # Radius of Earth in kilometers
     return r * c * 1000  # Convert to meters
 
 
