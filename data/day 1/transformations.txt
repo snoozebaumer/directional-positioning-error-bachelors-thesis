@@ -1,3 +1,0 @@
-measurements_20240429_105436_d1_p1:
-	changes:
-	- swapped out stage label "No BT-Scanning" for "No WiFi & BT-Scanning" and "No WiFi & BT-Scanning" for "No BT-Scanning" in 40 Measurements from 2024-04-29T10:40:28 to 2024-04-29T10:41:23 due to an error in the measurement process

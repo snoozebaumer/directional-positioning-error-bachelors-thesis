@@ -1,0 +1,12 @@
+measurements_20240429_105436_d1_p1:
+	changes:
+	- swapped out stage label "No BT-Scanning" for "No WiFi & BT-Scanning" and "No WiFi & BT-Scanning" for "No BT-Scanning" in 40 Measurements from 2024-04-29T10:40:28 to 2024-04-29T10:41:23 due to an error in the measurement process
+measurements_20240429_185301_d1_p2:
+	changes:
+	- swapped out location "Zugersee" for "Bundesplatz" in the first 100 measurements due to having had the wrong location selected in measurement process
+measurements_20240429_185301_d2_p1:
+	changes:
+	- swapped out location "Fussgänger" for "Bundesplatz" in the last 100 measurements due to having had the wrong location selected in measurement process
+measurements_20240430_181420_d2_p2:
+	changes
+	-swapped out location "Zugersee" for "Fussgänger" in the first 40 of the last 100 measurements due to having had the wrong location selected and noticing at 40/100 measurements
