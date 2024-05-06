@@ -16,3 +16,6 @@ measurements_20240503_105717_d4_p2:
 measurements_20240506_113445_d6_p1;
     changes
     -swapped out location "Zugersee" for "Bundesplatz" in the first 60 measurements due to mistake that was noticed while measuring
+measurements_20240506_173758_d6_p2:
+    changes
+    - deleted last 7 measurements "Everything enabled" in "Zugersee" as they were triggered by a rain drop on wet screen while settings were wrong.
