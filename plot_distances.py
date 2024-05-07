@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.lines import Line2D
 
 
 # Function to plot latitudinal and longitudinal differences
@@ -12,12 +14,27 @@ def plot_differences(data, title, footer, lat_diff_index, lon_diff_index, max_di
     ax.axhline(0, color='black', linestyle='-', linewidth=0.5)
     ax.axvline(0, color='black', linestyle='-', linewidth=0.5)
 
-    # Plot the latitudinal and longitudinal differences
-    ax.scatter(lon_diffs, lat_diffs, marker='+', color='black')
+    cmap = plt.cm.get_cmap('viridis', 18)
+
+    # Normalize the measurements
+    norm = plt.Normalize(0, len(lat_diffs))
+    for i, (lat_diff, lon_diff) in enumerate(zip(lat_diffs, lon_diffs)):
+        if i == 0:
+            color = 'black'  # First measurement
+        elif i == len(lat_diffs) - 1:
+            color = 'red'  # Last measurement
+        else:
+            color = cmap(norm(i))  # Gradient color
+        ax.scatter(lon_diff, lat_diff, color=color, marker='+')
 
     ax.set_xlabel('Long Differenz (m)')
     ax.set_ylabel('Lat Differenz (m)')
     ax.set_title(title)
+
+    legend_elements = [
+        Line2D([0], [0], marker='s', color='w', markerfacecolor='black', markersize=10, label='Erste Messung'),
+        Line2D([0], [0], marker='s', color='w', markerfacecolor='red', markersize=10, label='Letzte Messung')]
+    ax.legend(handles=legend_elements, loc='upper right')
 
     ax.text(0, -max_diff * 0.9, footer, horizontalalignment='center')
 
@@ -60,7 +77,7 @@ def plot_differences_for_measurements(file_path):
             measure_location = first_measurement[2]
             timestamp = first_measurement[0]
 
-            plot_differences(chunk, f'Ort: {measure_location}, Einstellung: {stage}', f'Start d. Messung: {timestamp}', lat_diff_index, lon_diff_index, max_diff_overall)
+            plot_differences(chunk, f'Ort: {measure_location}, Einstellung: {stage}', f'Start d. Messung: {timestamp}', lat_diff_index, lon_diff_index, (max_diff_overall + 0.1*max_diff_overall))
 
 
 # Example usage
