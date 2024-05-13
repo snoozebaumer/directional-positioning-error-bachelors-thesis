@@ -1,7 +1,7 @@
 import math
 
 # input file: the exported measurement csv file directly from Measuralyze application. No changes needed.
-FILE_PATH = "data/measurements_20240430_104703_d2_p1.csv"
+FILE_PATH = "data/measurements_20240503_105717_d4_p1.csv"
 
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -63,7 +63,7 @@ def add_distance_column(file_path):
             # Calculate distance between latitudes
             lat_diff = haversine(lat1, lon1, lat2, lon1)
 
-            if lat1 - lat2 < 0:
+            if lat1 - lat2 > 0:
                 """ due to output of haversine formula always being positive, switch mathematical sign if lat2 is lower
                     compared to lat1"""
                 lat_diff = -lat_diff
@@ -71,7 +71,7 @@ def add_distance_column(file_path):
             # Calculate distance between longitudes
             lon_diff = haversine(lat1, lon1, lat1, lon2)
 
-            if lon1 - lon2 < 0:
+            if lon1 - lon2 > 0:
                 """ due to output of haversine formula always being positive, switch mathematical sign if lat2 is more 
                     to the left compared to lat1 """
                 lon_diff = -lon_diff
@@ -82,7 +82,7 @@ def add_distance_column(file_path):
             line.append(str(lat_diff))
             line.append(str(lon_diff))
             line.append(str(diff))
-            print("latDiff: " + str(lat_diff) + " lonDiff: " + str(lon_diff) + " distance: " + str(diff))
+            print("latDiff: " + str(lat_diff) + " m, lonDiff: " + str(lon_diff) + " m, distance: " + str(diff))
 
         # Update header
         header.extend(['latDifference', 'lonDifference', 'distance'])
