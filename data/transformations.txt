@@ -12,7 +12,7 @@ measurements_20240430_181420_d2_p2:
 	-swapped out location "Zugersee" for "Fussgänger" in the first 40 of the last 100 measurements due to having had the wrong location selected and noticing at 40/100 measurements
 measurements_20240503_105717_d4_p2:
     changes
-    -swapped out stage label "Everything enabled" for "GPS Only" and "GPS Only" for "Everything enabled" on "Bundesplatz" due to measuring error that was noticed while measuring
+    -removed all measurements for location "Bundesplatz" as both WiFi and WiFi-Scanning was disabled according to settings dump, but device still found wifis, making me not trust the result.
 measurements_20240506_113445_d6_p1;
     changes
     -swapped out location "Zugersee" for "Bundesplatz" in the first 60 measurements due to mistake that was noticed while measuring
