@@ -35,10 +35,8 @@ def plot_differences(data, title, footer, lat_diff_index, lon_diff_index, max_di
         Line2D([0], [0], marker='s', color='w', markerfacecolor='red', markersize=10, label='Letzte Messung')]
     ax.legend(handles=legend_elements, loc='upper right')
 
-    ax.text(0, -max_diff * 0.9, footer, horizontalalignment='center')
-
     # Add footer
-    ax.text(0, -200, footer, horizontalalignment='center')
+    ax.text(0, -max_diff * 0.9, footer, horizontalalignment='center')
 
     ax.set_xlim(-max_diff, max_diff)
     ax.set_ylim(-max_diff, max_diff)
