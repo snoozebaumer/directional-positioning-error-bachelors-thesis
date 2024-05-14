@@ -12,10 +12,13 @@ measurements_20240430_181420_d2_p2:
 	-swapped out location "Zugersee" for "Fussgänger" in the first 40 of the last 100 measurements due to having had the wrong location selected and noticing at 40/100 measurements
 measurements_20240503_105717_d4_p2:
     changes
-    -removed all measurements for location "Bundesplatz" as both WiFi and WiFi-Scanning was disabled according to settings dump, but device still found wifis, making me not trust the result.
+    -removed all 100 measurements for location "Bundesplatz" as both WiFi and WiFi-Scanning was disabled according to settings dump, but device still found wifi routers, making me not trust the result.
 measurements_20240506_113445_d6_p1;
     changes
     -swapped out location "Zugersee" for "Bundesplatz" in the first 60 measurements due to mistake that was noticed while measuring
 measurements_20240506_173758_d6_p2:
     changes
     - deleted last 7 measurements "Everything enabled" in "Zugersee" as they were triggered by a rain drop on wet screen while settings were wrong.
+measurements_20240508_165828_d8_p2:
+    changes
+    - swapped out location "Zugersee" for "Bundesplatz" in the first 40 measurements due to mistake that was noticed while measuring
