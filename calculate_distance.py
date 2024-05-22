@@ -2,7 +2,7 @@ import math
 import os
 
 # input file: the exported measurement csv file directly from Measuralyze application. No changes needed.
-FILE_PATH = "data/measurements_20240503_105717_d4_p1.csv"
+FILE_PATH = "data/measurements_20240507_175210_d7_p2.csv"
 
 
 def haversine(lat1, lon1, lat2, lon2):

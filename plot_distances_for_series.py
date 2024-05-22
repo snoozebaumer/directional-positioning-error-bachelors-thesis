@@ -74,8 +74,8 @@ def plot_differences_for_measurements(file_path):
             measure_location = first_measurement[2]
             timestamp = first_measurement[0]
 
-            plot_differences(chunk, f'Ort: {measure_location}, Einstellung: {stage}', f'Start d. Messung: {timestamp}', lat_diff_index, lon_diff_index, (max_diff_overall + 0.1*max_diff_overall))
+            plot_differences(chunk, f'Ort: {measure_location}, Einstellung: {stage}', f'Start: {timestamp}', lat_diff_index, lon_diff_index, (max_diff_overall + 0.1*max_diff_overall))
 
 
 # Example usage
-plot_differences_for_measurements('updated_data.csv')
+plot_differences_for_measurements('updated_data_measurements_20240507_175210_d7_p2.csv')
