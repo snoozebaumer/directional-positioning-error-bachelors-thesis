@@ -12,9 +12,12 @@ ___
 - [calculate_distance.py](calculate_distance.py): calculates distance using haversine formula, used to generate the distances between actual location and gps location that is needed for analysis
 ### Chapter 6.2 - analysis
 - [boxplot.py](boxplot.py): used to generate box plots of entire data
-- [correlation_numerical.py](correlation_numerical.py): calculates the correlation for numerical attributes and target attributes latDifference, lonDifference and distance using pearson correlation
-- [correlation_boolean_categorical.py](correlation_boolean_categorical.py): creates boolean attributes for categorical attributes, in the style of vector space model, then calculates the correlation for boolean attributes and target attributes latDifference, lonDifference and distance using point-biserial correlation
-- [plot_distances_for_series.py](plot_distances_for_series.py): splits up the data into series of 20 measurements and plots graphs for series
 - [r2_analysis](r2_analysis.py): generates r2 score for whole dataset, not mentioned in thesis
-#### Chapter 6.2.1 - inaccurate first measurement
+#### Chapter 6.2.1 Correlation of numerical attributes
+- [correlation_numerical.py](correlation_numerical.py): calculates the correlation for numerical attributes and target attributes latDifference, lonDifference and distance using pearson correlation
+#### Chapter 6.2.2 Correlation of categorical and boolean attributes
+- [correlation_boolean_categorical.py](correlation_boolean_categorical.py): creates boolean attributes for categorical attributes, in the style of vector space model, then calculates the correlation for boolean attributes and target attributes latDifference, lonDifference and distance using point-biserial correlation
+#### Chapter 6.2.4 minimum and maximum distance to measure location
+- [plot_distances_for_series.py](plot_distances_for_series.py): splits up the data into series of 20 measurements and plots graphs for series
+#### Chapter 6.2.5 - inaccurate first measurement
 - [first_measurement_vs_median_measurement.py](first_measurement_vs_median_measurement.py): calculates the difference between distance of first measurement in series to actual location and median measurement to actual location, then plots them
