@@ -17,6 +17,8 @@ ___
 - [correlation_numerical.py](correlation_numerical.py): calculates the correlation for numerical attributes and target attributes latDifference, lonDifference and distance using pearson correlation
 #### Chapter 6.2.2 Correlation of categorical and boolean attributes
 - [correlation_boolean_categorical.py](correlation_boolean_categorical.py): creates boolean attributes for categorical attributes, in the style of vector space model, then calculates the correlation for boolean attributes and target attributes latDifference, lonDifference and distance using point-biserial correlation
+#### Chapter 6.2.3 Measurement locations
+- [polar_plots.py](polar_plots.py): plots the direction of each error for all locations (and stages, though they aren't mentioned in thesis, as they're largely inconclusive).
 #### Chapter 6.2.4 minimum and maximum distance to measure location
 - [plot_distances_for_series.py](plot_distances_for_series.py): splits up the data into series of 20 measurements and plots graphs for series
 #### Chapter 6.2.5 - inaccurate first measurement
