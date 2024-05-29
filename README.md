@@ -18,8 +18,8 @@ ___
 #### Chapter 6.2.2 Correlation of categorical and boolean attributes
 - [correlation_boolean_categorical.py](correlation_boolean_categorical.py): creates boolean attributes for categorical attributes, in the style of vector space model, then calculates the correlation for boolean attributes and target attributes latDifference, lonDifference and distance using point-biserial correlation
 #### Chapter 6.2.3 Measurement locations
-- [polar_plots.py](polar_plots.py): plots the direction of each error for all locations (and stages, though they aren't mentioned in thesis, as they're largely inconclusive).
-#### Chapter 6.2.4 minimum and maximum distance to measure location
+- [polar_plots.py](polar_plots.py): plots the direction of each error for all locations (and stages, they are shown in chapter 6.3.3).
+#### Chapter 6.2.5 minimum and maximum distance to measure location
 - [plot_distances_for_series.py](plot_distances_for_series.py): splits up the data into series of 20 measurements and plots graphs for series
-#### Chapter 6.2.5 - inaccurate first measurement
+#### Chapter 6.2.6 - inaccurate first measurement
 - [first_measurement_vs_median_measurement.py](first_measurement_vs_median_measurement.py): calculates the difference between distance of first measurement in series to actual location and median measurement to actual location, then plots them

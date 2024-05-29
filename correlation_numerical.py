@@ -1,7 +1,7 @@
 import pandas as pd
 import scipy.stats as stats
 
-FILE_PATH = "updated_data_total.csv"  # Update with your actual file path
+FILE_PATH = "updated_data_total.csv"
 df = pd.read_csv(FILE_PATH, delimiter='\t', encoding="iso-8859-1")
 
 # Selecting the relevant columns
