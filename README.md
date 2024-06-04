@@ -22,3 +22,6 @@ ___
 - [plot_distances_for_series.py](plot_distances_for_series.py): splits up the data into series of 20 measurements and plots graphs for series
 #### Chapter 6.2.6 - inaccurate first measurement
 - [first_measurement_vs_median_measurement.py](first_measurement_vs_median_measurement.py): calculates the difference between distance of first measurement in series to actual location and median measurement to actual location, then plots them
+
+## Video Pitch
+- [polar_plots_video.py](polar_plots_video.py): creates a couple more polar plots with different styling (and different titles) that were used in the video pitch
