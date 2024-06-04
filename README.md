@@ -8,11 +8,10 @@ ___
 ## Scripts and chapter they're first used in
 ### Chapter 5.2 - preparation for analysis
 - [data_profiling.py](data_profiling.py): used in data quality assessment for sanity check to make sure data makes sense as well as find errors with some general analysis
-#### Chapter 5.2.4 - calculated attributes
+#### Chapter 5.2.3 - calculated attributes
 - [calculate_distance.py](calculate_distance.py): calculates distance using haversine formula, used to generate the distances between actual location and gps location that is needed for analysis
 ### Chapter 6.2 - analysis
 - [boxplot.py](boxplot.py): used to generate box plots of entire data
-- [r2_analysis](r2_analysis.py): generates r2 score for whole dataset, not mentioned in thesis
 #### Chapter 6.2.1 Correlation of numerical attributes
 - [correlation_numerical.py](correlation_numerical.py): calculates the correlation for numerical attributes and target attributes latDifference, lonDifference and distance using pearson correlation
 #### Chapter 6.2.2 Correlation of categorical and boolean attributes
